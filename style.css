@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+h1 {
+    background: radial-gradient(gold, black);
+    border-radius: 20px;
+    width: 500px;
+    margin: 0 auto;
+    border-style: solid;
+}
+
+button {
+    background: radial-gradient(white, red);
+    border-radius: 20px;
+    width: 100px;
+    margin: 20px auto;
+    border-style: solid;
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacion {
+    0% {
+        background: radial-gradient(white, red);
+    }
+
+    50% {
+        background: radial-gradient(red, white);
+    }
+}
+canvas{
+    margin-top: 50px;
+}
