@@ -12,12 +12,13 @@ video = createCapture(VIDEO)
 video.hide();
 poses = ml5.poseNet(video, listo);
 poses.on("pose", respuesta);
+video.size(400, 400)
 }
 
 function draw(){
 image(video,0,0,400,400);
 medida = distancia * 2; 
-image(titulo,caderaDerechaX - medida +40, caderaDerechaY - medida +80, medida, medida / 2);
+image(titulo,caderaDerechaX - medida +80, caderaDerechaY - medida +80, medida, medida / 2);
 }
 
 function listo() {
@@ -32,4 +33,8 @@ function respuesta(resultados) {
       caderaIzquierdaX = resultados[0].pose.leftHip.x;
       distancia = caderaIzquierdaX - caderaDerechaX;  
     }
+}
+
+function guardar(){
+  save("filtro.png")
 }
